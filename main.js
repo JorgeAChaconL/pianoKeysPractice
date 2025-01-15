@@ -2,6 +2,7 @@ const keys = [
   "c-key",
   "d-key",
   "f-key",
+  "e-key",
   "g-key",
   "a-key",
   "b-key",
@@ -50,7 +51,7 @@ startOver.hidden = true;
 
 //Write anonymous event handler property and function for the third progress button
 
-
+//Ignore this, this is the last part reset button.
 //This is the event handler property and function for the startOver button
 startOver.onclick = function() {
   nextOne.hidden = false;
