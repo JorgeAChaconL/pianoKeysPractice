@@ -28,6 +28,9 @@ function keyReturn(event){
     event.target.style.backgroundColor = '';
 }
 
+// This variable stores the '-END' lyric element
+let lastLyric = document.getElementById('column-optional');
+
 //Write a named function with event handler properties
 function note(){
     notes.forEach(note => {
@@ -47,7 +50,7 @@ let nextThree = document.getElementById('third-next-line');
 let startOver = document.getElementById('fourth-next-line');
 
 //this variable stores the '-END' lyric element
-let lastLyric = document.getElementById('column-optional');
+
 
 //These statements are "hiding" all the progress buttons, but the first one
 nextTwo.hidden = true;
@@ -55,9 +58,22 @@ nextThree.hidden = true;
 startOver.hidden = true;
 
 //Write anonymous event handler property and function for the first progress button
-nex 
+nextOne.addEventListener('click', function(){
+    nextTwo.hidden = false;
+    nextOne.hidden = true;
+    document.getElementById('letter-note-five').innerHTML = 'D';
+    document.getElementById('letter-note-six').innerHTML = 'C';
+});
 
 //Write anonymous event handler property and function for the second progress button
+nextTwo.addEventListener('click', function(){
+    nextThree.hidden = false;
+    nextTwo.hidden = true;
+    document.getElementById('word-five').innerHTML = 'DEAR';
+    document.getElementById('word-six').innerHTML = 'FRI-';
+    lastLyric.style.display = 'inline-block';
+});
+
 
 
 //Write anonymous event handler property and function for the third progress button
